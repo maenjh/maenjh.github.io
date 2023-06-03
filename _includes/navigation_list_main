@@ -25,20 +25,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "trading" %}
-                        <li><a href="/categories/trading" class="" style="font-size:1.5em;">Trading</style><style="">({{category[1].size}})</style></a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "matlab" %}
-                        <li><a href="/categories/matlab" class="" style="font-size:1.5em;">Matlab</style><style="">({{category[1].size}})</style></a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
         <span class="nav__sub-title" style="font-family:'MaruBuri-Regular'; font-size:1.2em;">AIE</style></span>
             <ul>
                 {% for category in site.categories %}
@@ -47,22 +33,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <li>
-                <span class="nav__sub-title"; style="font-family:'MaruBuri-Regular'; font-size:1.2em;">Trading</style></span>
-                    <ul>
-                        {% for category in site.categories %}
-                            {% if category[0] == "tradingcode" %}
-                                <li><a href="/categories/tradingcode" class="" style="font-size:1.5em;">tradingcode</style> <style="">({{category[1].size}})</style></a></li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                    <ul>
-                        {% for category in site.categories %}
-                            {% if category[0] == "주식" %}
-                                <li><a href="/categories/주식" class="" style="font-size:1.5em;">주식</style><style="">({{category[1].size}})</style></a></li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>       
         <span class="nav__sub-title" style="font-family:'MaruBuri-Regular'; font-size:1.2em;">기타</style></span>
             <ul>
                 {% for category in site.categories %}
