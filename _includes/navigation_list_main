@@ -44,7 +44,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "trading" %}
-                        <li><a href="/categories/trading" class="" style="font-size:1.5em;">주식</style><style="">({{category[1].size}})</style></a></li>
+                        <li><a href="/categories/trading" class="" style="font-size:1.5em;">트레이딩</style><style="">({{category[1].size}})</style></a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
