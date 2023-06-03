@@ -32,6 +32,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "matlab" %}
+                        <li><a href="/categories/matlab" class="" style="font-size:1.5em;">Matlab</style><style="">({{category[1].size}})</style></a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title" style="font-family:'MaruBuri-Regular'; font-size:1.2em;">AIE</style></span>
             <ul>
                 {% for category in site.categories %}
