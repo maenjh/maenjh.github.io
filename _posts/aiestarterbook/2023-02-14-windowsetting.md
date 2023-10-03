@@ -13,14 +13,8 @@ classes: wide
 
 # 윈도우 세팅 및 프로그램 설치
 
-sns_instagram : m._.jaehyun 
 
-(안되거나 질문 있을 시 디엠으로 부탁드려요. 🙏🙏🙏🙏🙏)
-(https://www.instagram.com/m._.jaehyun/)
-
- 무엇보다도 처음 컴퓨터 시작할 때 계정 명 영문으로 만드는 거 추천. 
-
-이유로는 한글로 했을 때 호환이 안되는 프로그램이 있을 수 있고 파일 경로 설정할 때 영문이 잘 되어 있을 가능성이 높음.
+  처음 컴퓨터 시작할 때 계정 명 영문으로 만드는 거 추천. 한글로 했을 때 호환이 안되는 프로그램이 있을 수 있고 파일 경로 설정할 때 영문이 잘 되어 있을 가능성이 높음.
 
 ## 1. 데스크탑 및 노트북 후 세팅 (윈도우 11기준)
 ### - **윈도우**
@@ -40,8 +34,7 @@ sns_instagram : m._.jaehyun
             
     *  설정 – 개인 설정 – 작업 표시줄 항목 전부 끄기
             
-![workbar](https://user-images.githubusercontent.com/86664178/218251096-509dd02c-b3f0-4686-a451-d9bb59330357.png)
-
+![workbar]({{site.baseurl}}/assets/images/posts/aiestarterbook/windowsetting/workbar.png)
             
 - 장치 및 전원 관리 옵션
             
@@ -57,12 +50,12 @@ sns_instagram : m._.jaehyun
         
 폴더안에서 보이는 화면
         
-![filesetting](https://user-images.githubusercontent.com/86664178/218251628-c2144606-08fa-4485-93b2-2b45616698f3.png)
+![filesetting]({{site.baseurl}}/assets/images/posts/aiestarterbook/windowsetting/filesetting.png)
 
         
 우 상단 점 세 개 클릭 옵션 클릭
         
-![filesetting2](https://user-images.githubusercontent.com/86664178/218251639-88490183-3813-405f-8cc0-083c2482c050.png)
+![filesetting2]({{site.baseurl}}/assets/images/posts/aiestarterbook/windowsetting/filesetting2.png)
 
         
 숨김 파일 및 폴더에서 숨김 파일, 폴더 및 드라이브 표시로 설정
@@ -91,7 +84,7 @@ Ex. .ssh 파일 같은거 읽기 위함.
             
     mail.chu.ac.kr 접속 후 학교 이메일 학번@chu.ac.kr, 비번으로 로그인.
             
-![office1](https://user-images.githubusercontent.com/86664178/218251652-b4b3ea21-76cb-435b-b29a-cbcc7ee85f9f.png)
+![office1]({{site.baseurl}}/assets/images/posts/aiestarterbook/windowsetting/office1.png)
 
             
 우 상단 앱 설치
