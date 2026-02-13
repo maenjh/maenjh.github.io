@@ -1,9 +1,11 @@
 # main links
 main:
   - title: "About"
-    url: https://MoonJaehyun.github.io/about/
+    url: /about/
   - title: "Category"
-    url: "https://MoonJaehyun.github.io/categories/" #https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
 
   # - title: "Sample Posts"
   #   url: /year-archive/

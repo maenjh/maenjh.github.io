@@ -8,20 +8,13 @@ classes: wide
 
 ### 요청하신 페이지를 찾을 수 없습니다.
 
+입력한 주소가 변경되었거나 삭제되었을 수 있습니다.
 
-놀라셨나요?! 이전 경로로 생성되었기 때문인 것 같습니다! 당황하지 말고~!
+아래 주요 페이지로 이동해 보세요.
 
-`혹시 찾으시는 페이지가 아래에 있다면! 링크를 클릭!` 😃😃
+- [홈으로 이동]({{ '/' | relative_url }})
+- [카테고리 보기]({{ '/categories/' | relative_url }})
+- [태그 보기]({{ '/tags/' | relative_url }})
+- [소개 페이지]({{ '/about/' | relative_url }})
 
-[[딥러닝공부] 학습시 learning rate 특정 step에 맞춰 조율하고 텐서보드로 확인하기(learning rate decay)](https://chaelin0722.github.io/etc/step_decay/)
-
-
-[[에러분석] TypeError: can’t convert CUDA tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first](https://chaelin0722.github.io/etc/numpy_gpu_error/)
-
-
-[[논문정리📃] Going Deeper with Convolutions](https://chaelin0722.github.io/paperreview/googlenet/)
-
-
-[[Ubuntu] 우분투 세팅과 아나콘다 환경설정](https://chaelin0722.github.io/etc/server_setting_success/)
-
-`모두 즐거운 코딩하세요~!!`
+이전 링크에서 들어오셨다면 상단 메뉴나 카테고리 목록을 통해 최신 경로를 확인해 주세요.

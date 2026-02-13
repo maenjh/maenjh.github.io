@@ -1,0 +1,30 @@
+name: Site Check
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  site-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Hardcoded Link Checks
+        run: scripts/check-hardcoded-links.sh
+
+      - name: Build Site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build

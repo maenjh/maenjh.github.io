@@ -31,7 +31,6 @@ padding: 5px;
 
 ## Contact
  * Email : jjmjh214@gmail.com
- * Git : [https://github.com/MoonJaehyun](https://github.com/MoonJaehyun)
- * Blog : [https://MoonJaehyun.github.io/](https://MoonJaehyun.github.io/)
-
+ * Git : [https://github.com/maenjh](https://github.com/maenjh)
+ * Blog : [https://maenjh.github.io/](https://maenjh.github.io/)
 

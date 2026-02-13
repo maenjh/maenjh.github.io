@@ -1,0 +1,23 @@
+groups:
+  - title: "Code"
+    items:
+      - slug: "schoolassignment"
+        label: "SchoolAssignment"
+      - slug: "flutter"
+        label: "Flutter"
+      - slug: "matlab"
+        label: "Matlab"
+  - title: "AIE"
+    items:
+      - slug: "aiestarterbook"
+        label: "인공지능공학과"
+  - title: "주식"
+    items:
+      - slug: "trading"
+        label: "트레이딩"
+  - title: "기타"
+    items:
+      - slug: "etc"
+        label: "etc"
+      - slug: "errorcorrection"
+        label: "오류 및 해결"

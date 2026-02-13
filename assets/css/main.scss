@@ -54,3 +54,36 @@ html {
     font-weight: normal;
     font-style: normal;
 }
+
+.category-nav__total {
+  margin: 0.25rem 0 0.75rem;
+  font-weight: 700;
+}
+
+.category-nav__group {
+  margin-bottom: 0.75rem;
+}
+
+.category-nav__title {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-family: 'MaruBuri-Regular';
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.category-nav__items {
+  margin: 0;
+}
+
+.category-nav__link {
+  display: inline-flex;
+  gap: 0.2rem;
+  align-items: baseline;
+  font-size: 1.05em;
+}
+
+.category-nav__count {
+  color: #666;
+  font-size: 0.9em;
+}
