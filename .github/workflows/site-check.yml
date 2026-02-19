@@ -29,7 +29,9 @@ jobs:
         with:
           ruby-version: "3.2.2"
           bundler: 2.5.9
-          bundler-cache: true
+
+      - name: Install Ruby dependencies
+        run: bundle install --jobs 4 --retry 3
 
       - name: Hardcoded Link Checks
         run: scripts/check-hardcoded-links.sh
