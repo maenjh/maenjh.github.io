@@ -21,9 +21,11 @@
 {% endif %}
 
 {%- assign seo_description = page.description | default: page.excerpt | default: site.description -%}
-{%- if seo_description -%}
+{% if page.layout == "single" and seo_description.size < 60 and page.content %}
+  {%- assign seo_description = page.content | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip | truncate: 155 | escape_once -%}
+{% elsif seo_description %}
   {%- assign seo_description = seo_description | markdownify | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | escape_once | strip -%}
-{%- endif -%}
+{% endif %}
 
 {%- assign author = page.author | default: page.authors[0] | default: site.author -%}
 {%- assign author = site.data.authors[author] | default: author -%}
