@@ -4,16 +4,67 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
   {% assign posts = site.posts %}
 {% endif %}
 
+{% assign total_posts = site.posts | size %}
+{% assign total_categories = site.categories | size %}
+{% assign latest_post = site.posts | first %}
+
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__panel">
+    <p class="home-hero__eyebrow">{{ site.title }}</p>
+    <h2 id="home-hero-title" class="home-hero__title">{{ site.description | default: "Welcome to my dev log" }}</h2>
+    <p class="home-hero__description">
+      최근에 공부한 내용과 실험 기록을 카테고리별로 빠르게 탐색해 보세요.
+    </p>
+    <div class="home-hero__stats">
+      <div class="home-hero__stat">
+        <strong>{{ total_posts }}</strong>
+        <span>Total Posts</span>
+      </div>
+      <div class="home-hero__stat">
+        <strong>{{ total_categories }}</strong>
+        <span>Categories</span>
+      </div>
+      <div class="home-hero__stat">
+        <strong>{% if latest_post %}{{ latest_post.date | date: "%Y.%m.%d" }}{% else %}-{% endif %}</strong>
+        <span>Last Updated</span>
+      </div>
+    </div>
+    <div class="home-hero__actions">
+      <a class="btn home-hero__action home-hero__action--solid" href="{{ '/categories/' | relative_url }}">카테고리 보기</a>
+      <a class="btn home-hero__action" href="{{ '/tags/' | relative_url }}">태그 보기</a>
+      <button type="button" class="btn home-hero__action search__toggle">검색 열기</button>
+    </div>
+  </div>
+</section>
+
+<h3 class="archive__subtitle home-feed__title">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+<div class="home-filter" data-post-filter aria-label="Post category filter">
+  <span class="home-filter__label">Filter</span>
+  <button type="button" class="home-filter__chip is-active" data-filter-category="all" data-filter-label="All">
+    All <span class="home-filter__chip-count">{{ posts | size }}</span>
+  </button>
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    <button
+      type="button"
+      class="home-filter__chip"
+      data-filter-category="{{ category[0] | slugify | downcase }}"
+      data-filter-label="{{ category[0] | escape }}">
+      {{ category[0] }} <span class="home-filter__chip-count">{{ category[1].size }}</span>
+    </button>
+  {% endfor %}
+</div>
+<p class="home-filter__status" data-filter-status>현재 페이지의 포스트 {{ posts | size }}개를 보고 있어요.</p>
+
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
+<div class="entries-{{ entries_layout }}" data-filter-target>
   {% for post in posts %}
     {% include archive-single.html type=entries_layout %}
   {% endfor %}

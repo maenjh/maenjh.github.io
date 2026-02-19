@@ -141,6 +141,9 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/mo._.jhon/"
 
+after_footer_scripts:
+  - /assets/js/custom-interactions.js
+
 
 # Reading Files
 include:

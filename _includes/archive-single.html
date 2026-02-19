@@ -10,7 +10,18 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: 'list' }}__item">
+{% assign category_archive_path = site.category_archive.path | default: '/categories/' %}
+{% assign category_slugs = "" %}
+{% if post.categories %}
+  {% for category in post.categories %}
+    {% capture category_slugs %}{{ category_slugs }} {{ category | slugify | downcase }}{% endcapture %}
+  {% endfor %}
+{% endif %}
+
+<div
+  class="{{ include.type | default: 'list' }}__item"
+  data-post-categories="{{ category_slugs | strip }}"
+  data-post-title="{{ title | strip_html | escape }}">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -30,5 +41,12 @@
     {% endif %}
     
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    {% if post.categories and post.categories.size > 0 %}
+      <p class="archive__item-categories" aria-label="Post categories">
+        {% for category in post.categories limit: 3 %}
+          <a class="archive__item-category" href="{{ category_archive_path | relative_url }}#{{ category | slugify | downcase }}">{{ category }}</a>
+        {% endfor %}
+      </p>
+    {% endif %}
   </article>
 </div>
