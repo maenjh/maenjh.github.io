@@ -276,9 +276,21 @@ a:focus {
   overflow: hidden;
   border: 1px solid rgba(211, 223, 248, 0.98);
   border-radius: 1rem;
-  padding: clamp(1.2rem, 2vw + 0.8rem, 2.3rem);
+  padding: 1.2rem;
   background: linear-gradient(125deg, #FFFFFF 0%, #F6F9FF 55%, #EEF4FF 100%);
   box-shadow: var(--ui-shadow);
+
+  @include breakpoint($medium) {
+    padding: 1.6rem;
+  }
+
+  @include breakpoint($large) {
+    padding: 2rem;
+  }
+
+  @include breakpoint($x-large) {
+    padding: 2.3rem;
+  }
 }
 
 .home-hero__panel::before {
@@ -308,9 +320,21 @@ a:focus {
 .home-hero__title {
   margin: 0;
   font-family: 'MaruBuri-Regular';
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: 1.5rem;
   line-height: 1.18;
   color: var(--ui-accent-strong);
+
+  @include breakpoint($medium) {
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint($large) {
+    font-size: 2rem;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 2.2rem;
+  }
 }
 
 .home-hero__description {
