@@ -19,6 +19,8 @@
 bundle install
 npm install
 ```
+※ 로컬 설치는 기존대로 `npm install`이 가능하지만, CI는 `package-lock.json` 기준의 `npm ci`로 고정합니다.
+※ Node.js는 **18 이상 21 미만**, Ruby는 **3.2.x** 권장됩니다.
 
 ### 2) 빌드 및 로컬 실행
 
@@ -70,6 +72,30 @@ tags: [tag1, tag2]
 ## 참고
 
 이 저장소는 Minimal Mistakes 테마를 기반으로 하며, 사이트 설정과 레이아웃은 `_config.yml`에서 관리합니다.
+
+### 운영 설정 위치
+
+- Google Analytics(GA) 추적 ID: `_config.yml > analytics.google.tracking_id`
+- IP 익명화: `_config.yml > analytics.google.anonymize_ip`
+- Google AdSense 클라이언트 ID: `_config.yml > adsense.client_id`
+- 광고 스크립트 로딩 여부: `_config.yml > adsense.enabled`
+
+### 배포 전 점검 체크리스트
+
+- [ ] `_config.yml`의 `url`, `baseurl`이 실제 배포 경로와 일치하는지 확인
+- [ ] `analytics.provider`와 `analytics.google.tracking_id` 값이 배포용 ID인지 확인
+- [ ] `analytics.google.anonymize_ip`가 `true`인지 확인
+- [ ] `adsense.enabled`와 `adsense.client_id` 설정이 필요한 경우 정확히 들어가 있는지 확인
+- [ ] `comments.provider`와 해당 댓글 공급자 설정 값이 정상인지 확인
+- [ ] `search: true` 사용 시 검색 방식(`search_provider`)이 실제 사용 환경에 맞는지 확인
+- [ ] 최근 게시글은 `bundle exec jekyll build`로 로컬에서 성공 빌드되는지 확인
+- [ ] `npm ci`와 `bundle exec jekyll build`가 CI와 동일한 Node(20)/Ruby(3.2.2)/Bundler(2.5.9) 환경에서 통과되는지 확인
+
+### 버전 동기화 포인트
+
+- Node lock: `package-lock.json` 기준으로 의존성 고정
+- Bundler lock: `Gemfile.lock`(BUNDLED WITH: `2.5.9`) 기준 고정
+- 루트 버전 명시 파일: `.nvmrc`(`20`), `.ruby-version`(`3.2.2`)
 
 ---
 
