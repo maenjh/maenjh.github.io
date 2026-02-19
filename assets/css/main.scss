@@ -7,10 +7,16 @@
 $sans-serif: 'GowunDodum-Regular'; //'Cafe24Oneprettynight'; //'MaruBuri-Regular';  //'Noto Sans KR';
 $monospace: 'Ubuntu Mono';
 $type-size-4-5: 1.12em !default; // Ubuntu Mono is a bit small
+$background-color: #F6F9FF;
+$text-color: #1F2937;
+$muted-text-color: #64748B;
+$primary-color: #034AA6;
+$border-color: #D3DFF8;
+$link-color: #0339A6;
+$footer-background-color: #0339A6;
 
 @charset "utf-8";
-@import "minimal-mistakes/skins/dirt"; // skin
-@import "minimal-mistakes/skins/mint"; // skin
+@import "minimal-mistakes/skins/default"; // skin
 @import "minimal-mistakes";
 
 // https://github.com/mmistakes/minimal-mistakes/issues/1219
@@ -177,6 +183,54 @@ a:focus {
 
 .page__content h2 {
   border-bottom-color: rgba(3, 57, 166, 0.22);
+}
+
+hr {
+  border-top-color: rgba(3, 57, 166, 0.2) !important;
+}
+
+.page__meta,
+.page__meta a,
+.page__meta .fas,
+.page__meta .far,
+.page__meta .fab {
+  color: var(--tone-text-sub);
+}
+
+.page__taxonomy strong,
+.page__taxonomy .fas,
+.page__taxonomy .far,
+.page__taxonomy .fab {
+  color: var(--tone-text-sub);
+}
+
+.page__taxonomy .page__taxonomy-item,
+.page__taxonomy-item {
+  border: 1px solid rgba(3, 57, 166, 0.34) !important;
+  border-radius: 0.55rem;
+  background: #FFFFFF;
+  color: var(--ui-accent-strong) !important;
+}
+
+.page__taxonomy-item:visited {
+  color: var(--ui-accent-strong) !important;
+}
+
+.page__taxonomy-item:hover,
+.page__taxonomy-item:focus {
+  border-color: var(--ui-accent) !important;
+  background: var(--tone-blue-soft);
+  color: var(--ui-accent-strong) !important;
+}
+
+.page__share,
+.page__comments-title,
+.taxonomy__section:not(:last-child),
+.taxonomy__index a,
+.page__share + .pagination,
+.page__related,
+.feature__wrapper {
+  border-color: rgba(3, 57, 166, 0.2) !important;
 }
 
 .btn,
