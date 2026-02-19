@@ -1,23 +1,24 @@
 {
-  "name": "minimal-mistakes",
+  "name": "maenjh-github-io",
   "private": true,
   "version": "4.23.0",
-  "description": "Minimal Mistakes 2 column Jekyll theme.",
+  "description": "Moon's DevLog 개인 기술 블로그용 Jekyll 사이트 저장소.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+    "url": "https://github.com/maenjh/maenjh.github.io.git"
   },
   "keywords": [
     "jekyll",
-    "theme",
-    "minimal"
+    "blog",
+    "jekyll-site",
+    "minimal-mistakes"
   ],
-  "author": "Michael Rose",
+  "author": "Moon Jaehyun",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+    "url": "https://github.com/maenjh/maenjh.github.io/issues"
   },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "homepage": "https://maenjh.github.io/",
   "engines": {
     "node": ">= 0.10.0"
   },

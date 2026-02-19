@@ -20,7 +20,7 @@ title                    : "Moon's DevLog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "문재현(Moon jaehyun)"
-description              : "기술/공부 블로그"
+description              : "문재현의 개발 기록 저장소. 개발/학습 과정에서 얻은 인사이트와 문제 해결 과정을 정리합니다."
 url                      : "https://maenjh.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "maenjh/maenjh.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
